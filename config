@@ -1,0 +1,65 @@
+{
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock", "memory"],
+    "modules-right": ["tray", "hyprland/language", "pulseaudio"],
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1"
+    },
+    "tray": {
+        "icon-size": 14,
+        "spacing": 10
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}",
+		"on-click": "gsimplecal",
+		"active": true
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon} ",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "0% {icon} ",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol --class=pavucontrol"
+    },
+    "custom/media-next": {
+        "format": "",
+        "format-tooltip": "Next",
+        "on-click": "playerctl next",
+    },
+    "custom/media-prev": {
+        "format": "",
+        "format-tooltip": "Prev",
+        "on-click": "playerctl previous",
+    },
+    "custom/media-play-pause": {
+        "format": " ",
+        "format-tooltip": "Play/Pause",
+        "on-click": "playerctl play-pause",
+    },
+    "memory": {
+        "interval": 1,
+        "format": "{}% ",
+        "max-length": 10
+    },
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "AMERICA, YA!",
+        "format-ru": "Vodka",
+        "keyboard-name": "dell-dell-usb-entry-keyboard"
+    }
+}

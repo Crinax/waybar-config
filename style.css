@@ -1,0 +1,99 @@
+* {
+  border: none;
+  font-family:
+    Font Awesome,
+    Roboto,
+    Arial,
+    sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+window {
+  /*font-weight: bold;*/
+}
+window#waybar {
+  background: rgba(0, 0, 0, 0);
+}
+/*-----module groups----*/
+.modules-right {
+  border: 2px solid rgba(89, 89, 89, 0.6666666);
+  background-color: #232323;
+  padding: 5px 15px;
+  margin: 10px 20px 0 0;
+}
+
+#language {
+  margin-right: 10px;
+}
+
+.modules-center {
+  border: 2px solid rgba(89, 89, 89, 0.6666666);
+  background-color: #232323;
+  padding: 5px 15px;
+  margin: 10px 0 0 0;
+}
+.modules-left {
+  border: 2px solid rgba(89, 89, 89, 0.6666666);
+  background-color: #232323;
+  padding: 5px;
+  margin: 10px 0 0 20px;
+}
+
+#workspaces button {
+  padding: 1px 5px;
+  margin-left: 5px;
+  background-color: #232323;
+  transition: none;
+}
+
+#workspaces button:first-child {
+  margin-left: 0px;
+}
+
+#workspaces button:hover {
+  box-shadow: inherit;
+  background: linear-gradient(135deg, #fc5c7d, #6a82fb);
+  border-radius: 100%;
+}
+
+#workspaces button.active {
+  background: linear-gradient(135deg, #fc5c7d, #6a82fb);
+}
+
+#tray {
+  margin-right: 10px;
+}
+
+#mode {
+  color: #cc3436;
+  font-weight: bold;
+}
+/*-----Indicators----*/
+#idle_inhibitor.activated {
+  color: #2dcc36;
+}
+
+#pulseaudio.muted {
+  color: #cc3436;
+}
+#battery.charging {
+  color: #2dcc36;
+}
+#battery.warning:not(.charging) {
+  color: #e6e600;
+}
+#battery.critical:not(.charging) {
+  color: #cc3436;
+}
+#temperature.critical {
+  color: #cc3436;
+}
+#clock {
+  margin-right: 10px;
+}
+
+#media-play-pause {
+  margin: 0 10px;
+}
