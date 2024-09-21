@@ -13,10 +13,12 @@
         "spacing": 10
     },
     "clock": {
+        "format": "{:%H:%M:%S}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}",
 		"on-click": "gsimplecal",
-		"active": true
+		"active": true,
+		"interval": 1,
     },
     "pulseaudio": {
         "format": "{volume}% {icon} ",
