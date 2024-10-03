@@ -5,21 +5,36 @@
     Roboto,
     Arial,
     sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   color: #ffffff;
   border-radius: 20px;
 }
 
-window {
-  /*font-weight: bold;*/
+.custom__player-status, #custom-media-prev, #custom-media-next {
+  padding: 0 10px;
 }
+
+.custom__player-status:hover, #custom-media-prev:hover, #custom-media-next:hover {
+  padding: 0 10px;
+  background-color: #313244;
+}
+
+#custom-media-next {
+  margin-right: 10px;
+}
+
+#custom-media-name {
+  padding: 0 10px;
+  background-color: #313244;
+}
+
 window#waybar {
   background: rgba(0, 0, 0, 0);
 }
 /*-----module groups----*/
 .modules-right {
-  border: 2px solid rgba(89, 89, 89, 0.6666666);
-  background-color: #232323;
+  border: 3px solid #89b4fa;
+  background-color: #1e1e2e;
   padding: 5px 15px;
   margin: 10px 20px 0 0;
 }
@@ -29,14 +44,15 @@ window#waybar {
 }
 
 .modules-center {
-  border: 2px solid rgba(89, 89, 89, 0.6666666);
-  background-color: #232323;
-  padding: 5px 15px;
+  border: 2px solid #89b4fa;
+  background-color: #1e1e2e;
+  padding: 5px 5px 5px 5px;
   margin: 10px 0 0 0;
 }
+
 .modules-left {
-  border: 2px solid rgba(89, 89, 89, 0.6666666);
-  background-color: #232323;
+  border: 2px solid #89b4fa;
+  background-color: #1e1e2e;
   padding: 5px;
   margin: 10px 0 0 20px;
 }
@@ -44,7 +60,7 @@ window#waybar {
 #workspaces button {
   padding: 1px 5px;
   margin-left: 5px;
-  background-color: #232323;
+  background-color: transparent;
   transition: none;
 }
 
@@ -54,12 +70,12 @@ window#waybar {
 
 #workspaces button:hover {
   box-shadow: inherit;
-  background: linear-gradient(135deg, #fc5c7d, #6a82fb);
+  background: #313244;
   border-radius: 100%;
 }
 
 #workspaces button.active {
-  background: linear-gradient(135deg, #fc5c7d, #6a82fb);
+  background: #45475a;
 }
 
 #tray {
@@ -67,31 +83,31 @@ window#waybar {
 }
 
 #mode {
-  color: #cc3436;
+  color: #f38ba8;
   font-weight: bold;
 }
 /*-----Indicators----*/
 #idle_inhibitor.activated {
-  color: #2dcc36;
+  color: #a6e3a1;
 }
 
 #pulseaudio.muted {
-  color: #cc3436;
+  color: #f38ba8;
 }
 #battery.charging {
-  color: #2dcc36;
+  color: #a6e3a1;
 }
 #battery.warning:not(.charging) {
-  color: #e6e600;
+  color: #f9e2af;
 }
 #battery.critical:not(.charging) {
-  color: #cc3436;
+  color: #f38ba8;
 }
 #temperature.critical {
-  color: #cc3436;
+  color: #f38ba8;
 }
 #clock {
-  margin-right: 10px;
+  margin-left: 10px;
 }
 
 #media-play-pause {

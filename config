@@ -1,7 +1,7 @@
 {
     "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["clock", "memory"],
-    "modules-right": ["tray", "hyprland/language", "pulseaudio"],
+    "modules-center": ["custom/media-prev", "custom/media-play-pause", "custom/media-next", "custom/media-name"],
+    "modules-right": ["tray", "hyprland/language", "pulseaudio", "memory", "clock"],
 
     "hyprland/workspaces": {
         "format": "{icon}",
@@ -18,7 +18,7 @@
         "format-alt": "{:%Y-%m-%d}",
 		"on-click": "gsimplecal",
 		"active": true,
-		"interval": 1,
+		"interval": 1
     },
     "pulseaudio": {
         "format": "{volume}% {icon} ",
@@ -36,22 +36,39 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol --class=pavucontrol"
+        "on-click": "pavucontrol"
     },
     "custom/media-next": {
-        "format": "",
+        "format": "{}",
+        "hide-empty-text": true,
         "format-tooltip": "Next",
+        "exec": "~/.config/waybar/scripts/player-control-icon.py \"\"",
         "on-click": "playerctl next",
+        "exec-if": "playerctl status",
+        "restart-interval": 1
     },
     "custom/media-prev": {
-        "format": "",
+        "format": "{}",
+        "hide-empty-text": true,
         "format-tooltip": "Prev",
+        "exec": "~/.config/waybar/scripts/player-control-icon.py \"\"",
         "on-click": "playerctl previous",
+        "exec-if": "playerctl status",
+        "restart-interval": 1
     },
     "custom/media-play-pause": {
-        "format": " ",
-        "format-tooltip": "Play/Pause",
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/play-icon.py",
+        "exec-on-event": "on-click",
+        "return-type": "json",
         "on-click": "playerctl play-pause",
+        "exec-if": "playerctl status",
+        "restart-interval": 1
+    },
+    "custom/media-name": {
+        "format": "{}",
+        "exec": "echo \"$(playerctl metadata title) — $(playerctl metadata artist)\"",
+        "interval": 1
     },
     "memory": {
         "interval": 1,
