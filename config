@@ -51,7 +51,7 @@
         "format": "{}",
         "hide-empty-text": true,
         "format-tooltip": "Prev",
-        "exec": "~/.config/waybar/scripts/player-control-icon.py \"\"",
+        "exec": "~/.config/waybar/scripts/player-control-icon.py \"\"",
         "on-click": "playerctl previous",
         "exec-if": "playerctl status",
         "restart-interval": 1
