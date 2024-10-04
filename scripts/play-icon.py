@@ -9,9 +9,9 @@ result = {
 }
 
 if player_status.stdout == b"Paused\n":
-  result["text"] = ""
-elif player_status.stdout == b"Playing\n":
   result["text"] = ""
+elif player_status.stdout == b"Playing\n":
+  result["text"] = ""
 elif player_status.stdout == b"Stopped\n":
   result["text"] = ""
 
