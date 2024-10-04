@@ -40,7 +40,10 @@ window#waybar {
 }
 
 #language {
-  margin-right: 10px;
+  padding: 0 10px;
+  background-color: #313244;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .modules-center {
@@ -79,22 +82,17 @@ window#waybar {
 }
 
 #tray {
-  margin-right: 10px;
-}
-
-#mode {
-  color: #f38ba8;
-  font-weight: bold;
-}
-/*-----Indicators----*/
-#idle_inhibitor.activated {
-  color: #a6e3a1;
+  margin-right: 5px;
+  padding: 0 10px;
+  background-color: #313244;
 }
 
 #memory {
   padding: 0 10px;
   background-color: #313244;
   border: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 #memory.warning {
@@ -103,6 +101,17 @@ window#waybar {
 
 #memory.critical {
   background-color: #f38ba8;
+}
+
+#pulseaudio {
+  padding: 0 10px;
+  background-color: #313244;
+  border-radius: 0;
+  margin: 0 3px;
+}
+
+#pulseaudio:hover {
+  background-color: #45475a;
 }
 
 #pulseaudio.muted {
