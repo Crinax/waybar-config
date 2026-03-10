@@ -16,7 +16,7 @@
 
 .custom__player-status:hover, #custom-media-prev:hover, #custom-media-next:hover {
   padding: 0 10px;
-  background-color: #313244;
+  background-color: #2e2e32;
 }
 
 #custom-media-next {
@@ -25,7 +25,7 @@
 
 #custom-media-name {
   padding: 0 10px;
-  background-color: #313244;
+  background-color: #2e2e32;
 }
 
 window#waybar {
@@ -33,35 +33,35 @@ window#waybar {
 }
 /*-----module groups----*/
 .modules-right {
-  border: 3px solid #89b4fa;
-  background-color: #1e1e2e;
-  padding: 5px;
+  border: 1px solid #f6683c;
+  background-color: #1d1d20;
   margin: 10px 20px 0 0;
 }
 
 #language {
+  margin: 5px 0 5px 5px;
   padding: 0 10px;
-  background-color: #313244;
+  background-color: #2e2e32;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
 .modules-center {
-  border: 3px solid #89b4fa;
-  background-color: #1e1e2e;
+  border: 1px solid #f6683c;
+  background-color: #1d1d20;
   padding: 5px;
   margin: 10px 0 0 0;
 }
 
 .modules-left {
-  border: 3px solid #89b4fa;
-  background-color: #1e1e2e;
+  border: 1px solid #f6683c;
+  background-color: #1d1d20;
   padding: 5px;
   margin: 10px 0 0 20px;
 }
 
 #workspaces button {
-  padding: 1px 5px;
+  padding: 1px 8px 1px 5px;
   margin-left: 5px;
   background-color: transparent;
   transition: none;
@@ -73,23 +73,24 @@ window#waybar {
 
 #workspaces button:hover {
   box-shadow: inherit;
-  background: #313244;
+  background: #2e2e32;
   border-radius: 100%;
 }
 
 #workspaces button.active {
-  background: #45475a;
+  background: #45454a;
 }
 
 #tray {
-  margin-right: 5px;
+  margin: 5px 0 5px 5px;
   padding: 0 10px;
-  background-color: #313244;
+  background-color: #2e2e32;
 }
 
 #memory {
+  margin: 5px 0;
   padding: 0 10px;
-  background-color: #313244;
+  background-color: #2e2e32;
   border: none;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -105,9 +106,9 @@ window#waybar {
 
 #pulseaudio {
   padding: 0 10px;
-  background-color: #313244;
+  background-color: #2e2e32;
   border-radius: 0;
-  margin: 0 3px;
+  margin: 5px 3px;
 }
 
 #pulseaudio:hover {
@@ -130,11 +131,18 @@ window#waybar {
   color: #f38ba8;
 }
 #clock {
-  margin-left: 5px;
+  margin: 5px 0 5px 5px;
   padding: 0 10px;
-  background-color: #313244;
+  background-color: #2e2e32;
 }
 
 #media-play-pause {
   margin: 0 10px;
+}
+
+#custom-power {
+  margin: 0 -1px 0 5px;
+  padding: 5px 25px 5px 20px;
+  background-color: #f6683c;
+  color: #1d1d20;
 }

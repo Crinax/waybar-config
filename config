@@ -1,12 +1,15 @@
 {
-    "modules-left": ["hyprland/workspaces"],
+    "modules-left": ["niri/workspaces"],
     "modules-center": ["custom/media-prev", "custom/media-play-pause", "custom/media-next", "custom/media-name"],
-    "modules-right": ["tray", "hyprland/language", "pulseaudio", "memory", "clock"],
+    "modules-right": ["tray", "niri/language", "pulseaudio", "memory", "clock", "custom/power"],
+    "layer": "top",
 
-    "hyprland/workspaces": {
+    "niri/workspaces": {
         "format": "{icon}",
-        "on-scroll-up": "hyprctl dispatch workspace e+1",
-        "on-scroll-down": "hyprctl dispatch workspace e-1"
+        "format-icons": {
+            "active": "",
+            "default": ""
+        }
     },
     "tray": {
         "icon-size": 14,
@@ -70,16 +73,21 @@
         "exec": "echo \"$(playerctl metadata title) — $(playerctl metadata artist)\"",
         "interval": 1
     },
+    "custom/power": {
+        "format": "",
+        "exec": "echo \"\"",
+        "on-click": "rogout"
+    },
     "memory": {
         "interval": 1,
         "format": "  {}%",
         "states": {
-            "warning": 50,
+            "warning": 75,
             "critical": 90
         },
         "max-length": 10
     },
-    "hyprland/language": {
+    "niri/language": {
         "format": "{}",
         "format-en": "AMERICA, YA!",
         "format-ru": "Vodka",
